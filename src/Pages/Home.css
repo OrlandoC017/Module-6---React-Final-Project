@@ -1,0 +1,12 @@
+#home {
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeLogo {
+    width: 50vh;
+    height: 25vh;
+}

@@ -1,0 +1,16 @@
+#results {
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+}
+
+.results__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px
+}
+
+.results__header {
+    position: relative;
+    top: -100px
+}

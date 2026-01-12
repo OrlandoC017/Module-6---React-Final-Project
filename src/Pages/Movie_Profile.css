@@ -1,0 +1,38 @@
+#movie__profile {
+  flex-direction: column
+}
+
+.movie__poster {
+  height: 45vh;
+  width: 35vh;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px black;
+  margin-right: 100px;
+}
+
+.Movie__Wrapper {
+  display: flex;
+  width: 85vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Movie__Title {
+  margin-bottom: 100px;
+  font-weight: 900;
+}
+
+.movie__info {
+  font-size: large;
+}
+
+.IMDB__button {
+  background-color: yellow;
+  color:black;
+  box-shadow: 10px 5px 5px black;
+}
+
+.IMDB__button:hover {
+  background-color: orange;
+}
+

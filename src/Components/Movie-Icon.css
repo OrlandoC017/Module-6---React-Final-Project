@@ -1,0 +1,34 @@
+.movie__icon {
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.movie__name {
+    font-weight: 800;
+    font-size: larger;
+    margin-top: 15px;
+}
+
+
+
+.movie__icon--poster {
+    height: 350px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+.click {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(1.0);
+}
