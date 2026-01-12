@@ -6,6 +6,8 @@
 
 .results__wrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     width: 1200px
 }
@@ -13,4 +15,11 @@
 .results__header {
     position: relative;
     top: -100px
+}
+
+.profile__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

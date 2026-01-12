@@ -16,7 +16,7 @@ export default function Movie_Profile() {
 
   return (
     <section id="movie__profile">
-      <div className="container">
+      <div className="profile__container">
         <h1 className="Movie__Title">{movie.Title}</h1>
     
 

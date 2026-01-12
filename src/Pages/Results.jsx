@@ -9,12 +9,12 @@ export default function Results() {
 
   async function fetchMovies() {
     const { data } = await axios.get("https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s=CARS");
-    setMovies(data)
+    setMovies(data.Search || [])
   }
 
   useEffect(() => {
       fetchMovies();
-      console.log(movies)
+      
     }, []);
 
   return (
@@ -23,8 +23,8 @@ export default function Results() {
 
         <div className="results__wrapper">
           {movies
-            .slice(0.6)
-            .map((movies) => (<MovieIcon/>))}
+            .slice(0, 6)
+            .map((movie) => <MovieIcon key={movie.imdbID} movie={movie} />)}
             
         </div>
         
