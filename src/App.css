@@ -17,6 +17,8 @@ section {
 }
 
 .container {
-    width: 1440px
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
 }
                  

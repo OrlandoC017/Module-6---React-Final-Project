@@ -10,6 +10,7 @@ export default function Results() {
   async function fetchMovies() {
     const { data } = await axios.get("https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s=CARS");
     setMovies(data)
+    console.log(movies)
   }
 
   useEffect(() => {
@@ -21,9 +22,9 @@ export default function Results() {
         <h1 className="results__header">Search Results For: (Inquiry)</h1>
 
         <div className="results__wrapper">
-          {movies
-            .slice(0.6)
-            .map((movies) => (<MovieIcon/>))}
+          <MovieIcon/>
+      
+            
             
         </div>
         
