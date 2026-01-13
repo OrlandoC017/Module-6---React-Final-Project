@@ -6,10 +6,10 @@
 
 .results__wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    width: 1200px
+    width: 1400px
 }
 
 .results__header {

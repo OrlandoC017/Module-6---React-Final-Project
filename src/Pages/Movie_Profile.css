@@ -36,3 +36,22 @@
   background-color: orange;
 }
 
+.Back__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -800px;
+  top: -85px
+}
+
+.Back__btn:hover {
+  background-color: blue;
+  color: white;
+}
+
+.Back__arrow--img {
+  height: 25px;
+  width: 25px;
+  
+}

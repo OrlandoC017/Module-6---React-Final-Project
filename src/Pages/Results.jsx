@@ -8,7 +8,7 @@ export default function Results() {
   const [movies, setMovies] = useState([])
 
   async function fetchMovies() {
-    const { data } = await axios.get("https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s=CARS");
+    const { data } = await axios.get("https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s=avengers");
     setMovies(data.Search || [])
   }
 
@@ -24,7 +24,9 @@ export default function Results() {
         <div className="results__wrapper">
           {movies
             .slice(0, 6)
-            .map((movie) => <MovieIcon key={movie.imdbID} movie={movie} />)}
+            .map((movie) => <MovieIcon 
+            key={movie.imdbID} 
+            poster={movie.Poster ? movie.Poster : "https://orlandoc017.github.io/Module-4---API-Final-Project/assets/clapperboard-film-clip-art-dymo-cliparts-758df47cc87ec6092697f35ca8fe2546.png"} title={movie.Title} />)}
             
         </div>
         
