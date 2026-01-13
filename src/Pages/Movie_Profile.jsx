@@ -33,8 +33,12 @@ export default function Movie_Profile() {
         <div className="poster__wrapper">
           <img
             src={movie.Poster}
-            alt=""
+            alt={movie.Title}
             className="movie__poster"
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930";
+            }}
           />
         </div>
 

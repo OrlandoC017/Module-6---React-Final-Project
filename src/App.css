@@ -9,7 +9,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 16px;
 }
 
 .blue {
@@ -19,12 +20,29 @@ section {
 .container {
     display: flex;
     justify-content: space-between;
-    width: 1440px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
 a:visited {
   text-decoration: none;
   cursor: pointer;
 
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .Nav__Link {
+        display: none;
+    }
 }
                  

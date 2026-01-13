@@ -11,7 +11,7 @@ function NavBar() {
         <Link to="/" className="Logo__Wrapper">
           <img src={Logo} className="Logo" alt="" />
         </Link>
-        <div className="Nav__Links">
+        <div className="Nav__Links Mobile__Hide">
           <Link className="Nav__Link" to="/">
             Home
           </Link>

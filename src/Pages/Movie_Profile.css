@@ -4,26 +4,31 @@
 
 .movie__poster {
   height: 45vh;
-  width: 35vh;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 10px 5px 5px black;
-  margin-right: 100px;
+  margin-right: 40px;
 }
 
 .Movie__Wrapper {
   display: flex;
-  width: 85vh;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;;
 }
 
 .Movie__Title {
-  margin-bottom: 100px;
+  margin-bottom: 24px;
   font-weight: 900;
 }
 
 .movie__info {
   font-size: large;
+  width: 500px;
 }
 
 .IMDB__button {
@@ -41,9 +46,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  left: -800px;
-  top: -85px
+  position: static;
+  margin-bottom: 16px;
 }
 
 .Back__btn:hover {
@@ -55,4 +59,35 @@
   height: 25px;
   width: 25px;
   
+}
+
+@media (max-width: 1024px) {
+  .Movie__Wrapper {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Movie__Wrapper {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .movie__poster {
+    margin-right: 0;
+    max-width: 280px;
+  }
+
+  .movie__info {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie__poster {
+    max-width: 220px;
+  }
 }
