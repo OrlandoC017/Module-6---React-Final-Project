@@ -3,13 +3,15 @@ import MovieIcon from '../Components/Movie-Icon'
 import './Results.css'
 import axios from "axios";
 import { SearchContext } from "../App";
+import { Link, useParams } from "react-router-dom";
 
 
 export default function Results() {
+  const { id } = useParams();
   const [movies, setMovies] = useState([])
 
   async function fetchMovies() {
-    const { data } = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s=cars`);
+    const { data } = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s=${id}`);
     setMovies(data.Search || [])
   }
 
@@ -20,7 +22,7 @@ export default function Results() {
 
   return (
     <section id="results">
-        <h1 className="results__header">Search Results For: {SearchContext}</h1>
+        <h1 className="results__header">Search Results For: {id}</h1>
 
         <div className="results__wrapper">
           {movies
