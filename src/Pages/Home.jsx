@@ -1,6 +1,7 @@
 import Searchbar from "../Components/Searchbar";
 import "./Home.css";
 import Logo from "../Assets/Movie_Database-Cropped.png"
+import SearchbarHome from "../Components/SearchbarHome"
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
         Explore a vast collection of movies, read reviews, and find your next
         favorite film!
       </h2>
-      <Searchbar />
+
     </section>
     
   );

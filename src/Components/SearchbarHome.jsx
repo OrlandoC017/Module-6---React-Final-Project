@@ -1,21 +1,22 @@
-import "./Searchbar.css";
+import "./SearchbarHome.css";
 import React, { createContext, useEffect, useState, useContext } from "react";
 import { SearchContext } from "../App";
 import { useNavigate } from "react-router-dom";
 
-export default function Searchbar() {
-  const navigate = useNavigate();
-  const { keyword, setKeyword } = useContext(SearchContext);
-  const [query, setQuery] = useState("")
 
-  function onSubmit(e) {
-    e.preventDefault();
-    if (keyword && keyword.trim()) {
-      navigate(`/results/${encodeURIComponent(keyword.trim())}`)
-    }
-  }
-
-  return (
+export default function SearchbarHome() {
+    const navigate = useNavigate();
+      const { keyword, setKeyword } = useContext(SearchContext);
+ 
+    
+      function onSubmit(e) {
+        e.preventDefault();
+        if (keyword && keyword.trim()) {
+          navigate(`/results/${encodeURIComponent(keyword.trim())}`)
+        }
+      }
+  
+      return (
     <form onSubmit={onSubmit}>
       <div className="searchbar">
         <svg
@@ -40,3 +41,5 @@ export default function Searchbar() {
     </form>
   );
 }
+
+

@@ -16,7 +16,7 @@ export const SearchContext = createContext();
 function App() {
   const [keyword, setKeyword] = useState('');
   return (
-    <SearchContext.Provider value = {setKeyword}>
+    <SearchContext.Provider value = {{keyword, setKeyword}}>
       <Router>
         <>
           <NavBar />
@@ -26,6 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/profile/:id" element={<Movie_Profile />} />
             <Route path="/results/:id" element={<Results />} />
+            <Route path="/results/" element={<Results />} />
           </Routes>
           <Footer />
         </>
