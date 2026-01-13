@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./Movie_Profile.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import arrow from "../Assets/Arrow Back.svg"
 
 export default function Movie_Profile() {
+    const { id } = useParams();
     const [movie, setMovie] = useState([])
 
   async function fetchMovie() {
-    const { data } = await axios.get("https://www.omdbapi.com/?apikey=2d9420f2&i=tt0111161");
+    const { data } = await axios.get(`https://www.omdbapi.com/?apikey=2d9420f2&i=${id}`);
     setMovie(data)
   }
 
@@ -73,6 +74,7 @@ export default function Movie_Profile() {
       <a
         href={`https://www.imdb.com/title/${movie.imdbID}`}
         className="Nav__Link IMDB__button"
+        target="_blank"
       >
         IMDB
       </a>
