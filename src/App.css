@@ -32,6 +32,10 @@ a:visited {
 
 }
 
+.error__img {
+    height: 500px;
+}
+
 @media (max-width: 768px) {
     section {
         padding: 12px;
@@ -46,9 +50,13 @@ a:visited {
     }
 }
                  
-#about {
-    display: flex;
-    flex-direction: column;
+.about__para {
     max-width: 1200px;
-    align-items: center;
+}
+
+@media (max-width: 480px) {
+    .error__img {
+    height: 400px;
+
+}
 }

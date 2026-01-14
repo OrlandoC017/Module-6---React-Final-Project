@@ -27,6 +27,7 @@ function App() {
             <Route path="/profile/:id" element={<Movie_Profile />} />
             <Route path="/results/:id" element={<Results />} />
             <Route path="/results/" element={<Results />} />
+            <Route path="/contact/" element={<Contact />} />
           </Routes>
           <Footer />
         </>

@@ -7,7 +7,7 @@ import Logo from "../Assets/Movie_Database-Cropped.png";
 function NavBar() {
   return (
     <nav>
-      <div className="container">
+      <div className="nav__container container">
         <Link to="/" className="Logo__Wrapper">
           <img src={Logo} className="Logo" alt="" />
         </Link>
