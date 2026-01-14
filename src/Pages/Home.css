@@ -10,3 +10,17 @@
     width: 50vh;
     height: 25vh;
 }
+
+@media (max-width: 480px) {
+.homeLogo {
+    width: 75vw;
+    height: 25vh;
+}
+
+#home {
+    text-align: center;
+}
+}
+
+
+
