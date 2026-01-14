@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./Movie_Profile.css";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import arrow from "../Assets/Arrow Back.svg"
 
 export default function Movie_Profile() {
     const { id } = useParams();
     const [movie, setMovie] = useState([])
+    const navigate = useNavigate();
 
   async function fetchMovie() {
     const { data } = await axios.get(`https://www.omdbapi.com/?apikey=2d9420f2&i=${id}`);
@@ -20,10 +21,10 @@ export default function Movie_Profile() {
   return (
     <section id="movie__profile">
 
-      <Link className="Nav__Link Back__btn" to="/results">
+      <button className="Nav__Link Back__btn" onClick={() => navigate(-1)}>
       <img src={arrow} alt="" className="Back__arrow--img" />
                   Back
-                </Link>
+                </button>
       
       <div className="profile__container">
         <h1 className="Movie__Title">{movie.Title}</h1>

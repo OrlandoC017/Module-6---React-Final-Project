@@ -41,17 +41,14 @@ export default function Results() {
 
   useEffect(() => {
     const query = id || keyword;
-    if (query && query.trim()) {
-
-      setTimeout(() => {
-      fetchMovies(query);
-      console.log(movies);
-      }, 500)
+    if (id && id.trim()) {
+      fetchMovies(id);
+      
 
 
       
     }
-  }, [id, keyword])
+  }, [id])
 
   if (loading) {
     return (

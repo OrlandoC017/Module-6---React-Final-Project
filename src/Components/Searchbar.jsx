@@ -5,13 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 export default function Searchbar() {
   const navigate = useNavigate();
-  const { keyword, setKeyword } = useContext(SearchContext);
+  const { setKeyword } = useContext(SearchContext);
   const [query, setQuery] = useState("")
 
   function onSubmit(e) {
     e.preventDefault();
-    if (keyword && keyword.trim()) {
-      navigate(`/results/${encodeURIComponent(keyword.trim())}`)
+    if (query && query.trim()) {
+
+
+      
+      setKeyword(query.trim())
+      navigate(`/results/${encodeURIComponent(query.trim())}`)
     }
   }
 
@@ -32,8 +36,8 @@ export default function Searchbar() {
           type="text"
           className="search-input"
           placeholder="Search Movies"
-          value={keyword}
-          onChange={(e) => setKeyword(e.target.value)}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
           
         />
       </div>
